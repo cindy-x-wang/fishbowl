@@ -1,0 +1,21 @@
+.Task-container {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: var(--l);
+
+}
+
+.Task-container:last-child {
+    margin-bottom: 0;
+}
+
+.Task-checkbox {
+    margin-right: var(--m);
+
+    height: var(--l);
+    width: var(--l);
+
+    border: 2px solid var(--darkgrey);
+}
+
