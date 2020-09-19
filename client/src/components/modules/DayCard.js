@@ -15,9 +15,8 @@ class DayCard extends Component {
     this.addTask = this.addTask.bind(this);
   }
 
-
-  addTask() {
-    let newTasks = this.state.tasks.concat(<Task taskName={this.state.taskName}/>);
+  addTask(taskName) {
+    let newTasks = this.state.tasks.concat(<Task taskName={taskName}/>);
     this.setState({tasks: newTasks});
   }
 
@@ -25,11 +24,11 @@ class DayCard extends Component {
     return (
       <>
         <div className='DayCard-container'>
-            <div className='DayCard-addTask' onClick={this.addTask}> + </div>
+            <div className='DayCard-addTask' onClick={() => this.setState({showInput: !this.state.showInput})}> + </div>
             <div> {this.state.day} </div>
             <hr/>
             {this.state.tasks}
-            <TaskInput/>
+            {this.state.showInput && <TaskInput/>}
 
         </div>
 

@@ -19,3 +19,17 @@
     border: 2px solid var(--darkgrey);
 }
 
+input {
+    width: 955px;
+    height: var(--l);
+
+    font-family: "Roboto", sans-serif;
+    font-size: var(--m);
+    
+    border: white;
+    border-bottom: 1px solid var(--darkgrey);
+}
+
+input:focus {
+    outline: none;
+}
